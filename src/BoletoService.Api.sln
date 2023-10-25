@@ -9,13 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Api", "Boleto
 		{C149882F-ACEE-4659-8107-86D57DF592F3} = {C149882F-ACEE-4659-8107-86D57DF592F3}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Domain", "BoletoService.Domain\BoletoService.Domain\BoletoService.Domain.csproj", "{FD685558-A159-408C-8EB8-0606E1578C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Domain", "BoletoService.Domain\BoletoService.Domain.csproj", "{FD685558-A159-408C-8EB8-0606E1578C90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Infra", "BoletoService.Infra\BoletoService.Infra\BoletoService.Infra.csproj", "{C149882F-ACEE-4659-8107-86D57DF592F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Infra", "BoletoService.Infra\BoletoService.Infra.csproj", "{C149882F-ACEE-4659-8107-86D57DF592F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Application", "BoletoService.Application\BoletoService.Application\BoletoService.Application.csproj", "{A166C747-A97B-4B46-A4B5-0474ABEAA2F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Application", "BoletoService.Application\BoletoService.Application.csproj", "{A166C747-A97B-4B46-A4B5-0474ABEAA2F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Shared", "BoletoService.Shared\BoletoService.Shared\BoletoService.Shared.csproj", "{8DBE299A-4481-48D5-98AC-5C44F50F21C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoService.Shared", "BoletoService.Shared\BoletoService.Shared.csproj", "{8DBE299A-4481-48D5-98AC-5C44F50F21C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -17,3 +17,14 @@
 /src/BoletoService.Api/BoletoService.Api/BoletoService.Shared/BoletoService.Shared/obj
 /src/BoletoService.Api/BoletoService.Api/.vs/BoletoService.Api/DesignTimeBuild
 /src/BoletoService.Api/BoletoService.Api/.vs/ProjectEvaluation
+/src/.vs
+/src/BoletoService.Api/bin/Debug/net6.0
+/src/BoletoService.Api/obj
+/src/BoletoService.Application/bin/Debug/net6.0
+/src/BoletoService.Application/obj
+/src/BoletoService.Domain/bin/Debug/net6.0
+/src/BoletoService.Domain/obj
+/src/BoletoService.Infra/bin/Debug/net6.0
+/src/BoletoService.Infra/obj
+/src/BoletoService.Shared/bin/Debug/net6.0
+/src/BoletoService.Shared/obj

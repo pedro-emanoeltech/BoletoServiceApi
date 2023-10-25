@@ -9,8 +9,18 @@
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
 		<PackageReference Include="FluentValidation" Version="11.8.0" />
 	</ItemGroup>
+
 	<ItemGroup>
-		<ProjectReference Include="..\..\BoletoService.Domain\BoletoService.Domain\BoletoService.Domain.csproj" />
-		<ProjectReference Include="..\..\BoletoService.Infra\BoletoService.Infra\BoletoService.Infra.csproj" />
+	  <ProjectReference Include="..\BoletoService.Domain\BoletoService.Domain.csproj" />
+	  <ProjectReference Include="..\BoletoService.Shared\BoletoService.Shared.csproj" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Dtos\Response\" />
+	  <Folder Include="Dtos\Request\" />
+	  <Folder Include="Mapper\" />
+	  <Folder Include="Interfaces\" />
+	  <Folder Include="Services\" />
+	</ItemGroup>
+	
 </Project>

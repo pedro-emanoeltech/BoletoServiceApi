@@ -3,10 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\BoletoService.Domain\BoletoService.Domain\BoletoService.Domain.csproj" />
-  </ItemGroup> 
 	
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
@@ -14,7 +10,12 @@
 	
 	<ItemGroup>
 	  <Folder Include="Context\" />
+	  <Folder Include="EntityMap\" />
+	  <Folder Include="Services\" />
+	</ItemGroup> 
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\BoletoService.Domain\BoletoService.Domain.csproj" />
 	</ItemGroup>
 
-	 
 </Project>
