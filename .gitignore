@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/BoletoService.Api/BoletoService.Api/.vs/BoletoService.Api/config/applicationhost.config
+/src/BoletoService.Api/BoletoService.Api/.vs/BoletoService.Api/FileContentIndex
+/src/BoletoService.Api/BoletoService.Api/.vs/BoletoService.Api/v17
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Api/bin/Debug/net6.0
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Api/obj
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Application/BoletoService.Application/bin/Debug/net6.0
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Application/BoletoService.Application/obj
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Domain/BoletoService.Domain/bin/Debug/net6.0
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Domain/BoletoService.Domain/obj
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Infra/BoletoService.Infra/bin/Debug/net6.0
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Infra/BoletoService.Infra/obj
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Shared/BoletoService.Shared/bin/Debug/net6.0
+/src/BoletoService.Api/BoletoService.Api/BoletoService.Shared/BoletoService.Shared/obj
+/src/BoletoService.Api/BoletoService.Api/.vs/BoletoService.Api/DesignTimeBuild
+/src/BoletoService.Api/BoletoService.Api/.vs/ProjectEvaluation
