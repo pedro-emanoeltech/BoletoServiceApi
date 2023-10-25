@@ -1,7 +1,9 @@
+using BoletoService.Api.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+
+builder.Services.AddBoletoContext(builder.Configuration);
 
 var app = builder.Build();
 
