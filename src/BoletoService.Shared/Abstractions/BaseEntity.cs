@@ -7,6 +7,9 @@ namespace BoletoService.Shared.Abstractions
     /// </summary>
     public abstract class BaseEntity : IEntity
     {
+        /// <summary>
+        /// Obtém ou define o ID do registro.
+        /// </summary>
         public Guid Id { get; private init; } = Guid.NewGuid();
     }
 }
