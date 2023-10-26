@@ -1,14 +1,10 @@
-﻿
-
-using AutoMapper;
-using BoletoService.Application.Interfaces;
+﻿using BoletoService.Application.Interfaces;
 using BoletoService.Shared.Abstractions;
 using BoletoService.Shared.Messages;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoletoService.Api.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiConventionType(typeof(DefaultApiConventions))]
     [Consumes("application/json", new string[] { })]
@@ -21,11 +17,9 @@ namespace BoletoService.Api.Controllers
     {
 
         private readonly IBaseServiceApp<TEntity, TEntityRequest, TEntityResponse> _serviceApp;
-        private readonly IMapper _mapper;
-        public BaseController(IBaseServiceApp<TEntity, TEntityRequest, TEntityResponse> serviceApp, IMapper mapper)
+        public BaseController(IBaseServiceApp<TEntity, TEntityRequest, TEntityResponse> serviceApp)
         {
             _serviceApp = serviceApp;
-            _mapper = mapper;
         }
 
         /// <summary>

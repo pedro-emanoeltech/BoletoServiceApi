@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using BoletoService.Application.Dtos.Request;
+﻿using BoletoService.Application.Dtos.Request;
 using BoletoService.Application.Dtos.Response;
 using BoletoService.Application.Interfaces;
 using BoletoService.Domain.Entities;
@@ -12,10 +11,11 @@ namespace BoletoService.Api.Controllers
     public class BancoController : BaseController<Banco, BancoRequest, BancoResponse>
     {
         private readonly IBancoServiceApp _serviceApp;
-        public BancoController(IBancoServiceApp serviceApp, IMapper mapper) : base(serviceApp, mapper)
+        public BancoController(IBancoServiceApp serviceApp) : base(serviceApp)
         {
             _serviceApp = serviceApp;
         }
+
         /// <summary>
         /// Obtém uma lista bancos.
         /// </summary>
