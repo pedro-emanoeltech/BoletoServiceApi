@@ -44,8 +44,8 @@ namespace BoletoService.Api.Controllers
         /// Obtém um registro Banco
         /// </remarks>
         /// <param name="codigoBanco">Codigo do banco</param>
-        [HttpGet("{codigoBanco}")]
-        [ProducesResponseType(404)]
+        [HttpGet("codigoBanco/{codigoBanco}")]
+        [ProducesResponseType(typeof(Banco), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Banco), 400)]
         [ProducesResponseType(typeof(Banco), 500)]
         public virtual async Task<ActionResult<BancoResponse>> GetByCodigoBanco(string codigoBanco)
