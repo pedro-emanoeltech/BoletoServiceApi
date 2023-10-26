@@ -1,4 +1,5 @@
 ﻿using BoletoService.Shared.Abstractions;
+using BoletoService.Shared.Messages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

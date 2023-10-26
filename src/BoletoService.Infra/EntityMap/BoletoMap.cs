@@ -19,6 +19,7 @@ namespace BoletoService.Infra.EntityMap
             builder.Property(s => s.Valor).HasPrecision(18, 2).IsRequired();
             builder.Property(s => s.DataVencimento).HasColumnType(ColumnTypeConstants.Date).IsRequired();
 
+            builder.HasOne(s => s.Banco).WithMany(s => s.Boletos).HasForeignKey(i => i.BancoId);
         }
     }
 }

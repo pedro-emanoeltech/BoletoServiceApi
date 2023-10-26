@@ -15,6 +15,7 @@ namespace BoletoService.Infra.EntityMap
             //indices
             builder.HasIndex(s => s.Codigo).IsUnique(true);
 
+
         }
     }
 }
