@@ -16,7 +16,12 @@ namespace BoletoService.Api.Controllers
         {
             _serviceApp = serviceApp;
         }
-
+        /// <summary>
+        /// Obtém uma lista bancos.
+        /// </summary>
+        /// <remarks>
+        /// Retorna uma lista de bancos.
+        /// </remarks>
         [AllowAnonymous]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<BancoResponse>), 400)]
@@ -32,15 +37,21 @@ namespace BoletoService.Api.Controllers
             return Ok(result);
         }
 
-
-        [HttpGet("{id}")]
+        /// <summary>
+        /// Obtém um registro Banco pelo seu codigo.
+        /// </summary>
+        /// <remarks>
+        /// Obtém um registro Banco
+        /// </remarks>
+        /// <param name="codigoBanco">Codigo do banco</param>
+        [HttpGet("{codigoBanco}")]
         [ProducesResponseType(404)]
         [ProducesResponseType(typeof(Banco), 400)]
         [ProducesResponseType(typeof(Banco), 500)]
-        public virtual async Task<ActionResult<BancoResponse>> GetByCodigoBanco(string id)
+        public virtual async Task<ActionResult<BancoResponse>> GetByCodigoBanco(string codigoBanco)
         {
 
-            Shared.Messages.IResult result = await _serviceApp.GetByCodigoBanco(id);
+            Shared.Messages.IResult result = await _serviceApp.GetByCodigoBanco(codigoBanco);
             if (result is ResultFailed resultFail)
             {
                 return BadRequest(resultFail.Message);
