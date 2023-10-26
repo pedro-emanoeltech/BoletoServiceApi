@@ -61,10 +61,11 @@ namespace BoletoService.Api.Configuration
         }
         public static void UseConfigureApi(this IApplicationBuilder app)
         {
+            app.UseRouting();
+
             app.UseHttpLogging();
             app.UseStaticFiles();
             app.UseHttpsRedirection();
-            app.UseRouting();
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>
@@ -72,6 +73,15 @@ namespace BoletoService.Api.Configuration
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "BoletoApi v1");
             });
 
+            app.UseAuthorization();
+            app.UseAuthentication();
+
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

@@ -50,7 +50,6 @@ namespace BoletoService.Api.Controllers
         [ProducesResponseType(typeof(Banco), 500)]
         public virtual async Task<ActionResult<BancoResponse>> GetByCodigoBanco(string codigoBanco)
         {
-
             Shared.Messages.IResult result = await _serviceApp.GetByCodigoBanco(codigoBanco);
             if (result is ResultFailed resultFail)
             {
