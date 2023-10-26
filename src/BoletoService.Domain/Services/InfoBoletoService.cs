@@ -14,7 +14,7 @@ namespace BoletoService.Domain.Services
         {
             return CalculaAcrecimoVencimentoBoleto(await base.Get(id));
         }
-        public static Boleto? CalculaAcrecimoVencimentoBoleto(Boleto? boleto)
+        private static Boleto? CalculaAcrecimoVencimentoBoleto(Boleto? boleto)
         {
             if (boleto is not null && BoletoVencido(boleto))
             {

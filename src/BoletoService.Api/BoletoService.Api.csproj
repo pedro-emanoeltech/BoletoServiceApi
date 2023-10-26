@@ -28,8 +28,4 @@
 	  <ProjectReference Include="..\BoletoService.Application\BoletoService.Application.csproj" />
 	  <ProjectReference Include="..\BoletoService.Infra\BoletoService.Infra.csproj" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Controller\" />
-	</ItemGroup>
 </Project>
