@@ -10,5 +10,23 @@ namespace BoletoService.Domain.Services
         {
 
         }
+        public override async Task<Boleto?> Get(Guid id)
+        {
+            return CalculaAcrecimoVencimentoBoleto(await base.Get(id));
+        }
+        public static Boleto? CalculaAcrecimoVencimentoBoleto(Boleto? boleto)
+        {
+            if (boleto is not null && BoletoVencido(boleto))
+            {
+                decimal taxaDeJuros = boleto.Banco!.PercentualJuros / 100;
+                boleto.Valor *= (1 + taxaDeJuros);
+            }
+            return boleto;
+        }
+        private static bool BoletoVencido(Boleto boleto)
+        {
+            var dataAtual = DateTime.Now;
+            return dataAtual > boleto.DataVencimento;
+        }
     }
 }

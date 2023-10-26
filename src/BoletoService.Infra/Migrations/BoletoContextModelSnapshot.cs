@@ -49,7 +49,7 @@ namespace BoletoService.Infra.Migrations
                     b.HasIndex("Id")
                         .IsUnique();
 
-                    b.ToTable("Bancos");
+                    b.ToTable("Bancos", (string)null);
                 });
 
             modelBuilder.Entity("BoletoService.Domain.Entities.Boleto", b =>
@@ -100,7 +100,7 @@ namespace BoletoService.Infra.Migrations
                     b.HasIndex("Id")
                         .IsUnique();
 
-                    b.ToTable("Boletos");
+                    b.ToTable("Boletos", (string)null);
                 });
 
             modelBuilder.Entity("BoletoService.Domain.Entities.Boleto", b =>

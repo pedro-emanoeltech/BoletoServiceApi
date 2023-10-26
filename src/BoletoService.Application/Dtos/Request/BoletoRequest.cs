@@ -46,9 +46,9 @@ namespace BoletoService.Application.Dtos.Request
         /// </summary>
         public DateTime DataVencimento { get; set; }
 
-        public class BancoRequestValidator : AbstractValidator<BoletoRequest>
+        public class BoletoRequestValidator : AbstractValidator<BoletoRequest>
         {
-            public BancoRequestValidator()
+            public BoletoRequestValidator()
             {
                 RuleFor(banco => banco.BancoId)
                     .NotNull().NotEmpty().WithMessage("É obrigatório informar Id do banco");

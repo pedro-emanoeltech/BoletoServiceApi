@@ -27,7 +27,7 @@ namespace BoletoService.Application.Services
             _mapper = mapper;
             _validator = validator;
         }
-        public async Task<IResult> Add(TEntityRequest entityRequest)
+        public virtual async Task<IResult> Add(TEntityRequest entityRequest)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace BoletoService.Application.Services
                 return ResultFailed.New(ex.InnerException?.Message ?? ex.Message);
             }
         }
-        public async Task<IResult> Get(Guid id)
+        public virtual async Task<IResult> Get(Guid id)
         {
             TEntity val = await _service.Get(id);
             if (val == null)

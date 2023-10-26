@@ -21,7 +21,7 @@ namespace BoletoService.Domain.Services
             return await _repository.Add(entity, saveChanges);
         }
 
-        public async Task<TEntity?> Get(Guid id)
+        public virtual async Task<TEntity?> Get(Guid id)
         {
             return await _repository.Get(id);
         }

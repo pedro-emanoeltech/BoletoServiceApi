@@ -1,5 +1,5 @@
 ﻿using BoletoService.Domain.Interfaces.Repositories;
-using Microsoft.EntityFrameworkCore;
+using BoletoService.Infra.Context;
 using System.Threading.Tasks;
 
 
@@ -7,8 +7,8 @@ namespace BoletoService.Infra
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DbContext _context;
-        public UnitOfWork(DbContext context) => _context = context;
+        private readonly BoletoContext _context;
+        public UnitOfWork(BoletoContext context) => _context = context;
 
         public async Task<bool> Commit()
         {
