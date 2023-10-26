@@ -10,10 +10,12 @@ namespace BoletoService.Shared.Messages
     public class ResultListSucess<T> : IResultListSucess<T>, IResult where T : IDtoResponse
     {
         public IEnumerable<T?> Itens { get; set; }
+
         public ResultListSucess(IEnumerable<T?> itens)
         {
             Itens = itens ?? Enumerable.Empty<T>();
         }
+
         public static IResult New(IEnumerable<T?> itens)
         {
             return new ResultListSucess<T>(itens);

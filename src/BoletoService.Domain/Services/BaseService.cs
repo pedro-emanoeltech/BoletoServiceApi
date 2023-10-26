@@ -1,7 +1,6 @@
 ﻿using BoletoService.Domain.Interfaces.Repositories;
 using BoletoService.Domain.Interfaces.Services;
 using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
 
 namespace BoletoService.Domain.Services
 {
@@ -22,7 +21,7 @@ namespace BoletoService.Domain.Services
             return await _repository.Add(entity, saveChanges);
         }
 
-        public async Task<TEntity> Get(Guid id)
+        public async Task<TEntity?> Get(Guid id)
         {
             return await _repository.Get(id);
         }

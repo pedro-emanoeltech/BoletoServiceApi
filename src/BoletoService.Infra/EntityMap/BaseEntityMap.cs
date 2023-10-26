@@ -1,11 +1,11 @@
 ﻿using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BoletoService.Infra.EntityMap
 {
-    public abstract class BaseEntityMap<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity
+    public abstract class BaseEntityMap<TEntity> : IEntityTypeConfiguration<TEntity>
+        where TEntity : BaseEntity
     {
         public virtual void Configure(EntityTypeBuilder<TEntity> builder)
         {

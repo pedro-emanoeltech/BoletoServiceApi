@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 
 namespace BoletoService.Infra.Services
 {
-    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity, IEntity
+    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity>
+        where TEntity : BaseEntity, IEntity
     {
         protected readonly BoletoContext _context;
         protected readonly DbSet<TEntity> _dbSet;
@@ -26,13 +27,13 @@ namespace BoletoService.Infra.Services
         {
             try
             {
-                await _context.Set<TEntity>().AddAsync(TEntity);
-                await _dbSet.AddAsync(TEntity);
+                await _context.Set<TEntity>().AddAsync(entity);
+                await _dbSet.AddAsync(entity);
                 if (saveChanges)
                 {
                     await _context.SaveChangesAsync();
                 }
-                return TEntity;
+                return entity;
             }
             catch (Exception e)
             {
@@ -44,13 +45,13 @@ namespace BoletoService.Infra.Services
         {
             try
             {
-                _dbSet.Update(TEntity);
+                _dbSet.Update(entity);
                 if (saveChanges)
                 {
                     await _context.SaveChangesAsync();
                 }
 
-                return TEntity;
+                return entity;
             }
             catch (Exception e)
             {
@@ -62,11 +63,10 @@ namespace BoletoService.Infra.Services
         {
             try
             {
-
-                TEntity TEntity = await Get(id);
-                if (TEntity is not null)
+                TEntity? entity = await Get(id);
+                if (entity is not null)
                 {
-                    _context.Set<TEntity>().Remove(TEntity);
+                    _context.Set<TEntity>().Remove(entity);
                     await _context.SaveChangesAsync();
                     return true;
 
@@ -80,7 +80,7 @@ namespace BoletoService.Infra.Services
             }
         }
 
-        public virtual async Task<TEntity> Get(Guid id)
+        public virtual async Task<TEntity?> Get(Guid id)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace BoletoService.Infra.Services
             }
         }
 
-        public virtual async Task<TEntity> GetFirstOrDefault(Expression<Func<TEntity, bool>> predicate)
+        public virtual async Task<TEntity?> GetFirstOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
             try
             {
@@ -108,11 +108,18 @@ namespace BoletoService.Infra.Services
             }
         }
 
-        public virtual async Task<IEnumerable<TEntity>> GetToList(Expression<Func<TEntity, bool>> predicate)
+        public virtual async Task<IEnumerable<TEntity>?> GetToList(Expression<Func<TEntity, bool>>? predicate = null)
         {
             try
             {
-                return await _dbSet.AsNoTracking().Where(predicate).ToListAsync();
+                if (predicate != null)
+                {
+                    return await _dbSet.AsNoTracking().Where(predicate).ToListAsync();
+                }
+                else
+                {
+                    return await _dbSet.AsNoTracking().ToListAsync();
+                }
             }
             catch (Exception e)
             {

@@ -1,5 +1,4 @@
 ﻿using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
 using System.Linq.Expressions;
 
 
@@ -13,11 +12,11 @@ namespace BoletoService.Domain.Interfaces.Repositories
 
         Task<bool> Remove(Guid id);
 
-        Task<TEntity> Get(Guid id);
+        Task<TEntity?> Get(Guid id);
 
-        Task<TEntity> GetFirstOrDefault(Expression<Func<TEntity, bool>> predicate);
+        Task<TEntity?> GetFirstOrDefault(Expression<Func<TEntity, bool>> predicate);
 
-        Task<IEnumerable<TEntity>?> GetToList(Expression<Func<TEntity, bool>> predicate);
+        Task<IEnumerable<TEntity>?> GetToList(Expression<Func<TEntity, bool>>? predicate = null);
 
     }
 }

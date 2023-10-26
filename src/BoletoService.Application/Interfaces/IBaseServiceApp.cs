@@ -1,5 +1,7 @@
 ﻿using BoletoService.Shared.Abstractions;
 using BoletoService.Shared.Messages;
+using System;
+using System.Threading.Tasks;
 
 namespace BoletoService.Application.Interfaces
 {
@@ -8,11 +10,8 @@ namespace BoletoService.Application.Interfaces
         where TEntityRequest : IDtoRequest
         where TEntityResponse : IDtoResponse
     {
-        Task<T> Add(T Entity, bool saveChanges = true);
-        Task<T?> Get(string id);
-        Task<IList<T>> GetList(string ContaId = "");
-        Task<bool> Remove(string id);
-        Task<T> Edit(string id, T TEntity);
+        Task<IResult> Add(TEntityRequest entityRequest);
+        Task<IResult> Get(Guid id);
 
     }
 }

@@ -14,27 +14,27 @@ namespace BoletoService.Application.Dtos.Request
         /// <summary>
         /// Obtém ou define o nome do pagador. 
         /// </summary>
-        public string NomePagador { get; set; }
+        public string? NomePagador { get; set; }
 
         /// <summary>
         /// Obtém ou define o CPF ou CNPJ do pagador.
         /// </summary>
-        public string CpfCnpjPagador { get; set; }
+        public string? CpfCnpjPagador { get; set; }
 
         /// <summary>
         /// Obtém ou define o nome do Beneficiário. 
         /// </summary>
-        public string NomeBeneficiario { get; set; }
+        public string? NomeBeneficiario { get; set; }
 
         /// <summary>
         /// Obtém ou define o CPF ou CNPJ do Beneficiário.
         /// </summary>
-        public string CpfCnpjBeneficiario { get; set; }
+        public string? CpfCnpjBeneficiario { get; set; }
 
         /// <summary>
         /// Obtém ou define as observações do boleto.
         /// </summary>
-        public string Observacoes { get; set; }
+        public string? Observacoes { get; set; }
 
         /// <summary>
         /// Obtém ou define o valor para o boleto.
@@ -44,7 +44,7 @@ namespace BoletoService.Application.Dtos.Request
         /// <summary>
         /// Obtém ou define a data de vencimento do boleto.
         /// </summary>
-        public DateTime? DataVencimento { get; set; }
+        public DateTime DataVencimento { get; set; }
 
         public class BancoRequestValidator : AbstractValidator<BoletoRequest>
         {

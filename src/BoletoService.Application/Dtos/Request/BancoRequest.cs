@@ -11,12 +11,12 @@ namespace BoletoService.Application.Dtos.Request
         /// <summary>
         /// Obtém ou define o nome do banco.
         /// </summary>
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         /// <summary>
         /// Obtém ou define o código do banco.
         /// </summary>
-        public string Codigo { get; set; }
+        public string? Codigo { get; set; }
 
         /// <summary>
         /// Obtém ou define o percentual de juros cobrado pelo banco.

@@ -47,7 +47,6 @@ namespace BoletoService.Application.Services
                 return ResultFailed.New(ex.InnerException?.Message ?? ex.Message);
             }
         }
-
         public async Task<IResult> Get(Guid id)
         {
             TEntity val = await _service.Get(id);
@@ -59,14 +58,14 @@ namespace BoletoService.Application.Services
             return ResultSucess<TEntityResponse>.New(_mapper.Map<TEntityResponse>(val));
         }
 
-        public async Task<bool> Remove(Guid id)
+        public Task<bool> Remove(Guid id)
         {
-            NotImplementedException
+            throw new NotImplementedException();
         }
 
-        public async Task<IResult> Update(TEntity TEntity, bool saveChanges = true)
+        public Task<IResult> Update(TEntity TEntity, bool saveChanges = true)
         {
-            return await _repository.Update(TEntity, saveChanges);
+            throw new NotImplementedException();
         }
 
 

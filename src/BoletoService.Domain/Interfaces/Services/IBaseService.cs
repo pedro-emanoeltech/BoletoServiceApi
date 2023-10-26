@@ -1,5 +1,4 @@
 ﻿using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
 
 namespace BoletoService.Domain.Interfaces.Services
 {
@@ -11,7 +10,7 @@ namespace BoletoService.Domain.Interfaces.Services
 
         Task<bool> Remove(Guid id);
 
-        Task<TEntity> Get(Guid id);
+        Task<TEntity?> Get(Guid id);
 
         void Dispose();
     }
