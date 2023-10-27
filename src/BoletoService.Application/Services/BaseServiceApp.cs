@@ -49,7 +49,7 @@ namespace BoletoService.Application.Services
         }
         public virtual async Task<IResult> Get(Guid id)
         {
-            TEntity val = await _service.Get(id);
+            TEntity? val = await _service.Get(id);
             if (val == null)
             {
                 return ResultFailed.New("Not Found");

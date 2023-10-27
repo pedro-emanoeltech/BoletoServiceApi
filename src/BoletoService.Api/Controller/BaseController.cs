@@ -45,7 +45,7 @@ namespace BoletoService.Api.Controllers
                 {
                     return BadRequest(result);
                 }
-                TEntityResponse data = ((ResultSucess<TEntityResponse>)result).Data;
+                TEntityResponse? data = ((ResultSucess<TEntityResponse>)result).Data;
 
                 return (ActionResult<TEntityResponse>)Ok(data);
             }
