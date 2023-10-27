@@ -9,6 +9,7 @@ namespace BoletoService.Application.AutoMapper
         public DomainToResponseMapper()
         {
             CreateMap<Boleto, BoletoResponse>(MemberList.Destination);
+            CreateMap<Boleto, BoletoResumoResponse>(MemberList.Destination);
             CreateMap<Banco, BancoResponse>(MemberList.Destination);
         }
     }

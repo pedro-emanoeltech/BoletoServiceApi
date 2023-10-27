@@ -16,7 +16,7 @@ namespace BoletoService.Domain.Interfaces.Repositories
 
         Task<TEntity?> GetFirstOrDefault(Expression<Func<TEntity, bool>> predicate);
 
-        Task<IEnumerable<TEntity>?> GetToList(Expression<Func<TEntity, bool>>? predicate = null);
+        Task<IEnumerable<TEntity>?> GetToList(Expression<Func<TEntity, bool>>? predicate = null, Expression<Func<TEntity, object>>? orderBy = null);
 
     }
 }

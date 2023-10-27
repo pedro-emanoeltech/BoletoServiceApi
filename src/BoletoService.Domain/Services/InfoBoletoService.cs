@@ -6,9 +6,14 @@ namespace BoletoService.Domain.Services
 {
     public class InfoBoletoService : BaseService<Boleto>, IInfoBoletoService
     {
+        private readonly IBoletoRepository _repository;
         public InfoBoletoService(IBoletoRepository repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
         {
-
+            _repository = repository;
+        }
+        public async Task<IEnumerable<Boleto>?> ListaBoletosAsync()
+        {
+            return await _repository.GetToList(orderBy: x => x.DataVencimento!);
         }
         public override async Task<Boleto?> Get(Guid id)
         {

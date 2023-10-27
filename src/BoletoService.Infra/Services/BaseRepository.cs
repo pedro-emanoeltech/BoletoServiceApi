@@ -108,18 +108,24 @@ namespace BoletoService.Infra.Services
             }
         }
 
-        public virtual async Task<IEnumerable<TEntity>?> GetToList(Expression<Func<TEntity, bool>>? predicate = null)
+        public virtual async Task<IEnumerable<TEntity>?> GetToList(Expression<Func<TEntity, bool>>? predicate = null, Expression<Func<TEntity, object>>? orderBy = null)
         {
             try
             {
+                IQueryable<TEntity> query = _dbSet.AsNoTracking();
+
                 if (predicate != null)
                 {
-                    return await _dbSet.AsNoTracking().Where(predicate).ToListAsync();
+                    query = query.Where(predicate);
                 }
-                else
+
+                if (orderBy != null)
                 {
-                    return await _dbSet.AsNoTracking().ToListAsync();
+                    query = query.OrderBy(orderBy);
                 }
+
+                return await query.ToListAsync();
+
             }
             catch (Exception e)
             {

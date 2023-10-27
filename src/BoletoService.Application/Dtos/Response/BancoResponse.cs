@@ -1,12 +1,13 @@
-﻿using BoletoService.Shared.Messages;
+﻿using BoletoService.Shared.Abstractions;
 
 namespace BoletoService.Application.Dtos.Response
 {
     /// <summary>
     /// Representa um banco a ser cadastrado.
     /// </summary>
-    public class BancoResponse : IDtoResponse
+    public class BancoResponse : BaseDtoResponse
     {
+
         /// <summary>
         /// Obtém ou define o nome do banco.
         /// </summary>
