@@ -1,4 +1,4 @@
-﻿using BoletoService.Shared.Abstractions;
+﻿using Pe.Shared.Abstractions;
 using System;
 
 namespace BoletoService.Application.Dtos.Response

@@ -2,9 +2,9 @@
 using BoletoService.Application.Dtos.Response;
 using BoletoService.Application.Interfaces;
 using BoletoService.Domain.Entities;
-using BoletoService.Shared.Messages;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Pe.Shared.Messages;
 
 namespace BoletoService.Api.Controllers
 {
@@ -28,7 +28,7 @@ namespace BoletoService.Api.Controllers
         [ProducesResponseType(typeof(IEnumerable<BancoResponse>), 500)]
         public async Task<ActionResult<ResultListSucess<BancoResponse>>> ListarBancos()
         {
-            Shared.Messages.IResult result = await _serviceApp.ListarBancos();
+            Pe.Shared.Messages.IResult result = await _serviceApp.ListarBancos();
             if (result is ResultFailed resultFail)
             {
                 return BadRequest(resultFail.Message);
@@ -50,7 +50,7 @@ namespace BoletoService.Api.Controllers
         [ProducesResponseType(typeof(Banco), 500)]
         public virtual async Task<ActionResult<BancoResponse>> GetByCodigoBanco(string codigoBanco)
         {
-            Shared.Messages.IResult result = await _serviceApp.GetByCodigoBanco(codigoBanco);
+            Pe.Shared.Messages.IResult result = await _serviceApp.GetByCodigoBanco(codigoBanco);
             if (result is ResultFailed resultFail)
             {
                 return BadRequest(resultFail.Message);

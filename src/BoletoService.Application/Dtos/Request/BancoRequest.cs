@@ -1,5 +1,5 @@
-﻿using BoletoService.Shared.Messages;
-using FluentValidation;
+﻿using FluentValidation;
+using Pe.Shared.Messages;
 
 namespace BoletoService.Application.Dtos.Request
 {

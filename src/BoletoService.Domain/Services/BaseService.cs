@@ -1,6 +1,6 @@
 ﻿using BoletoService.Domain.Interfaces.Repositories;
 using BoletoService.Domain.Interfaces.Services;
-using BoletoService.Shared.Abstractions;
+using Pe.Shared.Abstractions;
 
 namespace BoletoService.Domain.Services
 {

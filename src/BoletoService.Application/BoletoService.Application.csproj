@@ -14,7 +14,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BoletoService.Domain\BoletoService.Domain.csproj" />
-	  <ProjectReference Include="..\BoletoService.Shared\BoletoService.Shared.csproj" />
 	</ItemGroup>
 	
 </Project>

@@ -1,5 +1,5 @@
-﻿using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
+﻿using Pe.Shared.Abstractions;
+using Pe.Shared.Messages;
 using System;
 using System.Threading.Tasks;
 

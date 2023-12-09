@@ -2,9 +2,9 @@
 using BoletoService.Application.Interfaces;
 using BoletoService.Domain.Interfaces.Repositories;
 using BoletoService.Domain.Interfaces.Services;
-using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
 using FluentValidation;
+using Pe.Shared.Abstractions;
+using Pe.Shared.Messages;
 using System;
 using System.Threading.Tasks;
 

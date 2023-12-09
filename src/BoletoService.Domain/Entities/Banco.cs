@@ -1,5 +1,4 @@
-﻿using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
+﻿using Pe.Shared.Abstractions;
 
 namespace BoletoService.Domain.Entities
 {

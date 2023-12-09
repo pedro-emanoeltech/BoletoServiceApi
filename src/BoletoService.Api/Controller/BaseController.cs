@@ -1,7 +1,7 @@
 ﻿using BoletoService.Application.Interfaces;
-using BoletoService.Shared.Abstractions;
-using BoletoService.Shared.Messages;
 using Microsoft.AspNetCore.Mvc;
+using Pe.Shared.Abstractions;
+using Pe.Shared.Messages;
 
 namespace BoletoService.Api.Controllers
 {

@@ -1,5 +1,6 @@
 ﻿using BoletoService.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Pe.Infra.EntityMap;
 
 namespace BoletoService.Infra.EntityMap
 {

@@ -1,7 +1,7 @@
 ﻿using BoletoService.Domain.Interfaces.Repositories;
 using BoletoService.Infra.Context;
-using BoletoService.Shared.Abstractions;
 using Microsoft.EntityFrameworkCore;
+using Pe.Shared.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Data;

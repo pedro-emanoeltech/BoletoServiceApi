@@ -1,8 +1,8 @@
-﻿using BoletoService.Shared.Abstractions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Pe.Shared.Abstractions;
 
-namespace BoletoService.Infra.EntityMap
+namespace Pe.Infra.EntityMap
 {
     public abstract class BaseEntityMap<TEntity> : IEntityTypeConfiguration<TEntity>
         where TEntity : BaseEntity
