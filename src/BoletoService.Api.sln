@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletoService.Infra", "Bole
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletoService.Application", "BoletoService.Application\BoletoService.Application.csproj", "{A166C747-A97B-4B46-A4B5-0474ABEAA2F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletoService.Shared", "BoletoService.Shared\BoletoService.Shared.csproj", "{8DBE299A-4481-48D5-98AC-5C44F50F21C2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +37,6 @@ Global
 		{A166C747-A97B-4B46-A4B5-0474ABEAA2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A166C747-A97B-4B46-A4B5-0474ABEAA2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A166C747-A97B-4B46-A4B5-0474ABEAA2F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8DBE299A-4481-48D5-98AC-5C44F50F21C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DBE299A-4481-48D5-98AC-5C44F50F21C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DBE299A-4481-48D5-98AC-5C44F50F21C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DBE299A-4481-48D5-98AC-5C44F50F21C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
